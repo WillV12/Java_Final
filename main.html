@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <div class="book-cover">
+    <div class="gold-frame">
+      <div class="gold-inner-border"></div>
+
+      <!-- Ornate Gold SVGs in Corners -->
+      <svg class="decor tl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 95 Q15 50 50 15 Q85 50 95 5 Q50 15 5 95 Z"/>
+      </svg>
+      <svg class="decor tr" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 95 Q15 50 50 15 Q85 50 95 5 Q50 15 5 95 Z"/>
+      </svg>
+      <svg class="decor br" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 95 Q15 50 50 15 Q85 50 95 5 Q50 15 5 95 Z"/>
+      </svg>
+      <svg class="decor bl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 95 Q15 50 50 15 Q85 50 95 5 Q50 15 5 95 Z"/>
+      </svg>
+
+      <!-- Title -->
+      <div class="book-title">My Story</div>
+      <div class="book-subtitle">Willem Dennis Vanderploeg</div>
+    </div>
+  </div>
+    <button id="next" class="nav-button right">Next Page →</button>
+    <script defer>
+        const next = document.getElementById("next");
+
+        next.addEventListener('click', () =>{
+            window.location.replace("chap1.html");
+        })
+    
+    </script>
+</body>
+</html>

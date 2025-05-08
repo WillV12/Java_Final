@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <div class="book-wrapper">
+    <div class="page">
+      <h2>Chapter I</h2>
+      <p>
+        Long ago, in a forgotten place beneath moonlit skies, a tale began that no quill had dared to ink. 
+        The winds whispered of old magic and solemn vows bound in silence and gold.
+      </p>
+    </div>
+    <div class="page">
+      <h2>Chapter II</h2>
+      <p>
+        The candlelight flickered as if it too remembered. Dust stirred like ancient breath, and every shadow leaned closer, listening.
+        His hand trembled as it hovered above the book, afraid to turn the next page.
+      </p>
+    </div>
+  </div>
+  <button id="back" class="nav-button left">← Previous Page</button>
+    <button id="next" class="nav-button right">Next Page →</button>
+    <script defer>
+        const next = document.getElementById("next");
+        const back = document.getElementById("back");
+
+        back.addEventListener('click', () =>{
+            window.location.replace("chap4.html");
+        })
+
+        next.addEventListener('click', () =>{
+            window.location.replace("chap6.html");
+        })
+    
+    </script>
+</body>
+</html>
