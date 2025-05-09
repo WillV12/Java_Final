@@ -2,41 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Book Pages</title>
+  <title>Chapter 3</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="pages.css">
+  <style>
+    .page {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .scrapbook-img {
+      width: 30%;
+      max-width: 240px;
+      margin: 12px;
+      border: 4px solid #d2b48c;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+      transform: rotate(var(--angle, 0deg));
+    }
+
+    .img1 { --angle: -2deg; }
+    .img2 { --angle: 3deg; }
+    .img3 { --angle: -1deg; }
+    .img4 { --angle: 2deg; }
+    .img5 { --angle: -3deg; }
+    .img6 { --angle: 1deg; }
+  </style>
 </head>
 <body>
+  <div class="audio-wrapper">
+  <audio controls autoplay="autoplay">
+        <source src="/audio/chap3.mp3" type="audio/mpeg">
+  </audio>
+  </div>
   <div class="book-wrapper">
     <div class="page">
-      <h2>Chapter I</h2>
-      <p>
-        Long ago, in a forgotten place beneath moonlit skies, a tale began that no quill had dared to ink. 
-        The winds whispered of old magic and solemn vows bound in silence and gold.
-      </p>
+      <h2 style="width: 100%; text-align: center;">Chapter III: Middle School</h2>
+      <img src="/images/IMG_0569.JPG" class="scrapbook-img img1" alt="image 1">
+      <img src="/images/FullSizeRender (1).jpeg" class="scrapbook-img img2" alt="image 2">
+      <img src="/images/FullSizeRender.jpeg" class="scrapbook-img img3" alt="image 3">
     </div>
     <div class="page">
-      <h2>Chapter II</h2>
-      <p>
-        The candlelight flickered as if it too remembered. Dust stirred like ancient breath, and every shadow leaned closer, listening.
-        His hand trembled as it hovered above the book, afraid to turn the next page.
-      </p>
+      <img src="/images/IMG_1063.jpg" class="scrapbook-img img4" alt="image 4">
+      <img src="/images/IMG_1065.jpg" class="scrapbook-img img5" alt="image 5">
+      <img src="/images/IMG_1078.jpg" class="scrapbook-img img6" alt="image 6">
     </div>
   </div>
+
   <button id="back" class="nav-button left">← Previous Page</button>
-    <button id="next" class="nav-button right">Next Page →</button>
-    <script defer>
-        const next = document.getElementById("next");
-        const back = document.getElementById("back");
+  <button id="next" class="nav-button right">Next Page →</button>
 
-        back.addEventListener('click', () =>{
-            window.location.replace("chap2.html");
-        })
+  <script defer>
+    const next = document.getElementById("next");
+    const back = document.getElementById("back");
 
-        next.addEventListener('click', () =>{
-            window.location.replace("chap4.html");
-        })
-    
-    </script>
+    back.addEventListener('click', () => {
+      window.location.replace("chap2.html");
+    });
+
+    next.addEventListener('click', () => {
+      window.location.replace("chap4.html");
+    });
+  </script>
 </body>
 </html>

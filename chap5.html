@@ -5,38 +5,97 @@
   <title>Book Pages</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="pages.css">
+  <style>
+    .page {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .scrapbook-img, .scrapbook-video {
+      width: 28%;
+      max-width: 200px;
+      margin: 10px;
+      border: 4px solid #d2b48c;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+      transform: rotate(var(--angle, 0deg));
+    }
+
+    .scrapbook-video {
+      display: block;
+    }
+
+    .img1 { --angle: -2deg; }
+    .img2 { --angle: 1deg; }
+    .img3 { --angle: -1deg; }
+    .img4 { --angle: 3deg; }
+    .img5 { --angle: -3deg; }
+    .img6 { --angle: 2deg; }
+    .img7 { --angle: -1deg; }
+    .img8 { --angle: 2deg; }
+    .img9 { --angle: -2deg; }
+    .img10 { --angle: 1deg; }
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-family: 'Cinzel Decorative', cursive;
+      margin-bottom: 20px;
+    }
+
+    .scrapbook-video-wide {
+  width: 90%;
+  max-width: 400px;
+  margin: 15px auto;
+  display: block;
+  border: 4px solid #d2b48c;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+  </style>
 </head>
 <body>
+  <div class="audio-wrapper">
+  <audio controls autoplay>
+    <source src="/audio/chap5.mp3" type="audio/mpeg">
+  </audio>
+  </div>
   <div class="book-wrapper">
     <div class="page">
-      <h2>Chapter I</h2>
-      <p>
-        Long ago, in a forgotten place beneath moonlit skies, a tale began that no quill had dared to ink. 
-        The winds whispered of old magic and solemn vows bound in silence and gold.
-      </p>
+      <h2>Chapter V: Now</h2>
+      <img src="/images/IMG_3473.jpg" class="scrapbook-img img1" alt="Image 1">
+      <img src="/images/IMG_3481.jpg" class="scrapbook-img img2" alt="Image 2">
+      <img src="/images/IMG_3494.jpg" class="scrapbook-img img3" alt="Image 3">
+      <img src="/images/IMG_3846 (2).jpg" class="scrapbook-img img4" alt="Image 4">
+      <video src="/images/IMG_3872.MOV" class="scrapbook-video-wide" controls></video>
     </div>
+
     <div class="page">
-      <h2>Chapter II</h2>
-      <p>
-        The candlelight flickered as if it too remembered. Dust stirred like ancient breath, and every shadow leaned closer, listening.
-        His hand trembled as it hovered above the book, afraid to turn the next page.
-      </p>
+      <img src="/images/IMG_4814.jpg" class="scrapbook-img img6" alt="Image 6">
+      <img src="/images/View recent photos.JPEG" class="scrapbook-img img7" alt="Image 7">
+      <img src="/images/IMG_7439.jpg" class="scrapbook-img img8" alt="Image 8">
+      <img src="/images/IMG_0826.jpg" class="scrapbook-img img9" alt="Image 9">
+      <img src="/images/IMG_6796.jpg" class="scrapbook-img img10" alt="Image 10">
     </div>
   </div>
+
   <button id="back" class="nav-button left">← Previous Page</button>
-    <button id="next" class="nav-button right">Next Page →</button>
-    <script defer>
-        const next = document.getElementById("next");
-        const back = document.getElementById("back");
+  <button id="next" class="nav-button right">Next Page →</button>
 
-        back.addEventListener('click', () =>{
-            window.location.replace("chap4.html");
-        })
+  <script defer>
+    const next = document.getElementById("next");
+    const back = document.getElementById("back");
 
-        next.addEventListener('click', () =>{
-            window.location.replace("chap6.html");
-        })
-    
-    </script>
+    back.addEventListener('click', () => {
+      window.location.replace("chap4.html");
+    });
+
+    next.addEventListener('click', () => {
+      window.location.replace("chap6.html");
+    });
+  </script>
 </body>
 </html>
